@@ -3,13 +3,13 @@ Cost-benefit calculation for the no-show risk flagging use case, using the
 classifier's actual measured precision/recall rather than invented numbers.
 
 Assumptions are stated explicitly and are illustrative, not sourced from
-any real BMW or dealer financial data — this is a synthetic-data project
+any real manufacturer or dealer financial data — this is a synthetic-data project
 demonstrating how to structure a business case, not a real cost estimate.
 """
 import pandas as pd
 from src.model import train_and_evaluate, find_flagging_threshold_for_recall
 
-# --- Illustrative assumptions (stated explicitly, not real BMW data) ---
+# --- Illustrative assumptions (stated explicitly, not real manufacturer data) ---
 SERVICE_SLOT_VALUE_EUR = 180        # avg revenue at risk per idle service-bay slot
 INTERVENTION_COST_EUR = 3           # cost of an extra reminder call/SMS per flagged appointment
 INTERVENTION_RECOVERY_RATE = 0.35   # share of flagged true no-shows who show up anyway after intervention

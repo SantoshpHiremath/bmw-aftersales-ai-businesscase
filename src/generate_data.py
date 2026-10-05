@@ -8,7 +8,7 @@ have been used for another customer. This is a real, well-known
 operational problem in dealer service departments, used here as the
 subject of a small, honestly-evaluated AI use case for a business case.
 
-All data is synthetic. No real BMW, dealer, or customer data is used or
+All data is synthetic. No real manufacturer, dealer, or customer data is used or
 implied anywhere in this project.
 """
 import csv
