@@ -1,6 +1,6 @@
 const pptxgen = require("pptxgenjs");
 
-// "Midnight Executive" family adapted for BMW-context automotive aftersales:
+// "Midnight Executive" family adapted for automotive aftersales:
 // deep navy dominant, ice-blue supporting, sharp white/amber accents for
 // callouts — a clean, boardroom-appropriate palette.
 const NAVY = "12233D";
@@ -62,7 +62,7 @@ function addFooter(slide, pageNum) {
     slide.addText(c.label, { x: x + 0.25, y: y + 1.35, w: cardW - 0.5, h: 1.1, align: "center", fontFace: FONT_BODY, fontSize: 14, color: DARKTEXT });
   });
 
-  slide.addText("Illustrative figures on synthetic data, broadly in line with published aftersales industry ranges — not real BMW dealer data.", {
+  slide.addText("Illustrative figures on synthetic data, broadly in line with published aftersales industry ranges — not real dealer data.", {
     x: 0.6, y: 5.15, w: 12.1, h: 0.8, fontFace: FONT_BODY, fontSize: 13, italic: true, color: MUTED,
   });
   addFooter(slide, 2);
@@ -140,7 +140,7 @@ function addFooter(slide, pageNum) {
   addFooter(slide, 4);
 }
 
-// ---------------- Slide 5: Roadmap + honesty ----------------
+// ---------------- Slide 5: Roadmap + scope ----------------
 {
   const slide = pres.addSlide();
   slide.background = { color: OFFWHITE };
@@ -162,15 +162,15 @@ function addFooter(slide, pageNum) {
   });
 
   slide.addShape("roundRect", { x: 0.6, y: 4.1, w: 12.1, h: 2.55, rectRadius: 0.1, fill: { color: NAVY }, line: { type: "none" } });
-  slide.addText("Honest limitations", { x: 1.0, y: 4.3, w: 11.3, h: 0.4, fontFace: FONT_HEAD, fontSize: 16, bold: true, color: AMBER });
+  slide.addText("Scope & next steps", { x: 1.0, y: 4.3, w: 11.3, h: 0.4, fontFace: FONT_HEAD, fontSize: 16, bold: true, color: AMBER });
   slide.addText([
-    { text: "All data is synthetic — no real BMW, dealer, or customer data was used.", options: { bullet: true, breakLine: true, color: "FFFFFF" } },
-    { text: "The 35% intervention recovery rate is an assumption, not evidence — pilot data should replace it.", options: { bullet: true, breakLine: true, color: "FFFFFF" } },
-    { text: "0.78 AUC means real misclassification in both directions — this prioritizes capacity, it doesn't predict individuals precisely.", options: { bullet: true, color: "FFFFFF" } },
+    { text: "All data is synthetic — no real manufacturer, dealer, or customer data was used.", options: { bullet: true, breakLine: true, color: "FFFFFF" } },
+    { text: "The 35% intervention recovery rate is a planning assumption; pilot data will replace it.", options: { bullet: true, breakLine: true, color: "FFFFFF" } },
+    { text: "A 0.78 AUC model prioritizes appointments so limited intervention capacity goes where it matters most.", options: { bullet: true, color: "FFFFFF" } },
   ], { x: 1.0, y: 4.75, w: 11.3, h: 1.8, fontFace: FONT_BODY, fontSize: 13, paraSpaceAfter: 8 });
   addFooter(slide, 5);
 }
 
-pres.writeFile({ fileName: "BMW_Aftersales_NoShow_Deck.pptx" }).then(() => {
+pres.writeFile({ fileName: "Aftersales_NoShow_Deck.pptx" }).then(() => {
   console.log("done");
 });

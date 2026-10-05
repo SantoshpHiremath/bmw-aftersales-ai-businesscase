@@ -33,10 +33,10 @@ system I built and verified myself.
   model's **actual measured** precision/recall (not assumed numbers),
   plus a sensitivity table across the one genuinely uncertain
   assumption (intervention recovery rate).
-- **`BMW_Aftersales_NoShow_BusinessCase.docx`** — a one-artifact business
+- **`Aftersales_NoShow_BusinessCase.docx`** — a one-artifact business
   case document: problem, use case, evidence, cost-benefit, sensitivity,
   KPIs, milestones, and an explicit limitations section.
-- **`BMW_Aftersales_NoShow_Deck.pptx`** — a 5-slide executive summary of
+- **`Aftersales_NoShow_Deck.pptx`** — a 5-slide executive summary of
   the same material, in presentation form.
 
 ## Measured results

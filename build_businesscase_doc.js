@@ -59,7 +59,7 @@ const doc = new Document({
         spacing: { after: 40 },
         children: [new TextRun({ text: "Business Case: Aftersales Service No-Show Risk Flagging", bold: true, size: 30, font: "Calibri", color: ACCENT })],
       }),
-      p("Illustrative business case on synthetic data — prepared as a portfolio artifact, not a real BMW proposal.", { italics: true, size: 17, color: MUTED, after: 240 }),
+      p("Illustrative business case on synthetic data.", { italics: true, size: 17, color: MUTED, after: 240 }),
 
       h1("1. Problem"),
       p(
@@ -165,15 +165,15 @@ const doc = new Document({
         [30, 70]
       ),
 
-      h1("8. Limitations & Honest Caveats"),
-      bullet("All data is synthetic; no real BMW, dealer, or customer data was used. Real historical data would very likely show different feature relationships and no-show base rates."),
-      bullet("The 35% recovery-rate assumption is not evidence-based — it should be replaced with pilot data before this business case is finalized."),
-      bullet("A 0.78 AUC model will misclassify a meaningful share of appointments in both directions; this is a prioritization tool for limited intervention capacity, not a precise individual-level prediction."),
+      h1("8. Scope & Next Steps"),
+      bullet("All data is synthetic; no real manufacturer, dealer, or customer data was used. Real historical data would very likely show different feature relationships and no-show base rates."),
+      bullet("The 35% recovery rate is a planning assumption; pilot data will replace it before the business case is finalized."),
+      bullet("The 0.78 AUC model is designed as a prioritization tool that directs limited intervention capacity to the appointments most likely to be missed."),
     ],
   }],
 });
 
 Packer.toBuffer(doc).then((buf) => {
-  fs.writeFileSync("BMW_Aftersales_NoShow_BusinessCase.docx", buf);
+  fs.writeFileSync("Aftersales_NoShow_BusinessCase.docx", buf);
   console.log("done");
 });
